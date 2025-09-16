@@ -1,0 +1,110 @@
+.header {
+  max-width: 1120px;
+  /* equivalent to max-w-7xl */
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  /* centers the div */
+  padding-top: 5rem;
+  /* py-20 */
+  padding-bottom: 5rem;
+  /* py-20 */
+  padding-left: 1rem;
+  /* px-4 */
+  padding-right: 1rem;
+  /* px-4 */
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-top: 10rem;
+    /* md:py-40 */
+    padding-bottom: 10rem;
+  }
+}
+
+.header-title {
+  font-size: 2rem;
+  /* text-2xl */
+  font-weight: bold;
+  color: black;
+  /* dark:text-white */
+  font-family: "Great Vibes", cursive;
+}
+
+@media (min-width: 768px) {
+  .header-title {
+    font-size: 5rem;
+    /* md:text-7xl */
+  }
+}
+
+.header-subtitle {
+  max-width: 32rem;
+  /* max-w-2xl */
+  font-size: 0.9rem;
+  /* text-base */
+  margin-top: 2rem;
+  /* mt-8 */
+  color: #343536;
+  /* dark:text-neutral-200 */
+  font-family: 'Poppins';
+}
+
+@media (min-width: 768px) {
+  .header-subtitle {
+    font-size: 1.25rem;
+    /* md:text-xl */
+  }
+}
+
+.hero-parallax {
+  height: 300vh;
+  background-color: #f5f5f5;
+  padding-top: 10rem;
+  /* py-40 = 10rem top + bottom */
+  padding-bottom: 10rem;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: auto;
+  perspective: 600px;
+  transform-style: preserve-3d;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5rem;
+  /* mb-20 = 5rem */
+  gap: 5rem;
+  /* space-x-20 = 5rem */
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.row-reverse>*:not(:last-child) {
+  margin-left: 5rem;
+  /* space-x-reverse behavior */
+}
+
+@media (max-width:700px) {
+  .header{
+    top: 5%;
+  }
+  .header-title{
+    font-size: 3.0rem;
+    text-align: center;
+  }
+  .header-subtitle{
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,95 @@
+.nav {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  background: transparent;
+  z-index: 5;
+  padding: 10px 50px;
+}
+
+.logo {
+  width: 220px;
+  height: 100%;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links ul li {
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.nav-links ul li>svg{
+  font-size: 30px;
+}
+.nav-links ul li:hover {
+  transform: scale(1.1);
+}
+
+/* ================= Responsive ================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .nav {
+    padding: 10px 30px;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .nav-links ul {
+    gap: 25px;
+  }
+
+  .nav-links ul li {
+    font-size: 1rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .nav {
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    width: 260px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links ul {
+    gap: 20px;
+  }
+
+  .nav-links ul li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small mobiles */
+@media (max-width: 480px) {
+  .logo {
+    width: 130px;
+  }
+
+  .nav-links ul li {
+    font-size: 0.9rem;
+  }
+}
