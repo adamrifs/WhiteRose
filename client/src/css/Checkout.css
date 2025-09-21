@@ -1,29 +1,37 @@
+/* Base styles */
 .checkout-container {
   display: flex;
   justify-content: space-between;
   padding: 40px;
   font-family: Arial, sans-serif;
   background: #f9f9f9;
+  gap: 20px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
 .checkout-left, .checkout-right {
   background: white;
   padding: 20px;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .checkout-left {
-  width: 60%;
+  flex: 1 1 60%; /* flexible width, min 60% */
+  min-width: 300px;
 }
 
 .checkout-right {
-  width: 35%;
+  flex: 1 1 35%; /* flexible width, min 35% */
+  min-width: 250px;
 }
 
+/* Shipping form rows */
 .shipping-form .form-row {
   display: flex;
   gap: 15px;
   margin-bottom: 15px;
+  flex-wrap: wrap; /* stack inputs on small screens */
 }
 
 .shipping-form input, 
@@ -34,6 +42,7 @@
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 textarea {
@@ -43,29 +52,33 @@ textarea {
 .phone-input {
   display: flex;
   gap: 5px;
+  flex: 1 1 100%;
 }
 
 .shipping-methods {
   display: flex;
   gap: 15px;
   margin-top: 15px;
+  flex-wrap: wrap; /* allow stacking on small screens */
 }
 
 .shipping-methods label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex: 1;
+  flex: 1 1 45%;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .shipping-methods label.active {
   border: 2px solid black;
 }
 
+/* Cart Items & Discount */
 .cart-item {
   display: flex;
   justify-content: space-between;
@@ -75,24 +88,28 @@ textarea {
 .discount {
   display: flex;
   margin: 15px 0;
+  flex-wrap: wrap; /* stack on mobile */
 }
 
 .discount input {
-  flex: 1;
+  flex: 1 1 70%;
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 6px 0 0 6px;
 }
 
 .discount button {
-  padding: 8px 12px;
+  flex: 1 1 30%;
+  padding: 8px;
   border: none;
   background: black;
   color: white;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
+  margin-top: 5px;
 }
 
+/* Summary & Payment */
 .summary p, .summary h4 {
   display: flex;
   justify-content: space-between;
@@ -109,4 +126,58 @@ textarea {
   font-size: 16px;
   margin-top: 20px;
   cursor: pointer;
+}
+
+/* ----------------- Responsive Styles ----------------- */
+@media screen and (max-width: 900px) {
+  .checkout-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .checkout-left, .checkout-right {
+    width: 100%;
+  }
+
+  .shipping-methods label {
+    flex: 1 1 100%;
+  }
+
+  .discount input, .discount button {
+    flex: 1 1 100%;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .shipping-form .form-row {
+    flex-direction: column;
+  }
+
+  .phone-input {
+    flex-direction: column;
+  }
+
+  .checkout-left h3, .checkout-right h3 {
+    font-size: 1.2rem;
+  }
+
+  .checkout-left input,
+  .checkout-left textarea,
+  .checkout-left select,
+  .checkout-right input,
+  .checkout-right button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .summary p, .summary h4 {
+    font-size: 14px;
+  }
+
+  .payment-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
 }
