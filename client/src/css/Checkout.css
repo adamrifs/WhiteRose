@@ -1,0 +1,112 @@
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+.checkout-left, .checkout-right {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.checkout-left {
+  width: 60%;
+}
+
+.checkout-right {
+  width: 35%;
+}
+
+.shipping-form .form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.shipping-form input, 
+.shipping-form select, 
+.shipping-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+.phone-input {
+  display: flex;
+  gap: 5px;
+}
+
+.shipping-methods {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.shipping-methods label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.shipping-methods label.active {
+  border: 2px solid black;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.discount {
+  display: flex;
+  margin: 15px 0;
+}
+
+.discount input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px 0 0 6px;
+}
+
+.discount button {
+  padding: 8px 12px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.summary p, .summary h4 {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.payment-btn {
+  width: 100%;
+  padding: 15px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
